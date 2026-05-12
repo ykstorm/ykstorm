@@ -1,73 +1,62 @@
-# GitHub Profile README
-# ykstorm / Lakshyaraj Singh Rao
+# Hi, I'm Lakshyaraj 👋
+
+**Full-Stack Developer (Backend + Platform Engineering)** · BTech CCE, Manipal University Jaipur · Bangalore, India · Open to fresher/junior roles · MIT License
+
+---
+
+## What I'm building
+
+Solo CTO of [Homesty.ai](https://homesty.ai) — an AI-powered real estate platform. I built every layer: streaming GPT-4o chat with runtime guardrails (abort mid-generation on policy violations), pgvector RAG with sub-50ms retrieval, a 7-module decision engine, and a full admin system. 165 production deploys.
+
+The open-source work below shows the pieces in detail.
+
+---
+
+## The repos
+
+```mermaid
+graph LR
+    subgraph "LLM Safety"
+        GP[guardrail-proxy\n23 CHECK cases\n16-token sliding window] --> SB[stream-bench\nTTFT · TPS · guardrail overhead\n$2 cost ceiling]
+    end
+
+    subgraph "AI Infrastructure"
+        RS[rag-starter\npgvector RAG template\nsub-50ms retrieval] --> CC[CodeCraft AI\nBrowser IDE\nWebContainers + Ollama]
+    end
+
+    subgraph "Platform Engineering"
+        DS[devops-showcase\nKubernetes GitOps\nArgoCD + canary deploys] --> CC
+    end
+```
+
+| Project | What it proves | Stack |
+|---------|----------------|-------|
+| **[guardrail-proxy](https://github.com/ykstorm/guardrail-proxy)** | LLM safety systems — 23 regex-based CHECK cases, streaming mid-abort, partial delivery guarantee | TypeScript · Vitest · NPM |
+| **[stream-bench](https://github.com/ykstorm/stream-bench)** | Performance measurement rigor — TTFT, TPS, guardrail overhead, cost ceiling with JSON Lines ledger | TypeScript · OpenAI · Anthropic |
+| **[rag-starter](https://github.com/ykstorm/rag-starter)** | RAG from production — 0.30 cosine floor, adaptive K (6/10), idempotent upsert, extracted from Homesty.ai buyerchat | Next.js · Prisma · pgvector |
+| **[devops-showcase](https://github.com/ykstorm/devops-showcase)** | Kubernetes platform engineering — kind cluster, ArgoCD app-of-apps, canary deploys + auto-rollback, full observability stack | Kubernetes · ArgoCD · Helm · Prometheus |
+| **[CodeCraft AI](https://github.com/ykstorm/codecraft-ai)** | Browser-based IDE internals — WebContainers (real Node.js in browser via V8 Service Worker), Monaco Editor, xterm.js, 4-mode Ollama chat | Next.js · WebContainers · Docker |
+
+---
+
+## Stack
+
+**Backend:** TypeScript · Next.js 15 · React 19 · Node.js · Prisma 7 · PostgreSQL/pgvector · Neon
+**AI:** GPT-4o streaming · guardrails · RAG · Ollama local LLMs
+**Platform:** Kubernetes · ArgoCD · Argo Rollouts · Prometheus · Loki · Tempo · Grafana
+**DevOps:** GitHub Actions · Docker · Docker Compose · kind · Helm
+
+---
+
+## Status
+
+- 🔍 **Open to:** Fresher / Junior Full-Stack Developer, Backend Engineer, or Platform Engineering roles (India/Remote)
+- 🎓 **Education:** BTech Computer Communication Engineering (8th Semester), Manipal University Jaipur
+- 📍 **Location:** Jaipur, India
+- 📧 **Reach:** [raolakshyaraj@gmail.com](mailto:raolakshyaraj@gmail.com) · [linkedin.com/in/lakshyarajsinghrao](https://linkedin.com/in/lakshyarajsinghrao)
+
+---
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Founder%20%26%20Engineer-Homesty.ai-6366f1?style=flat-square&labelColor=1e1e2e" />
-  <img src="https://img.shields.io/badge/Focus-TypeScript%20%7C%20Next.js%20%7C%20AI%20Platform-38bdf8?style=flat-square&labelColor=1e1e2e" />
-  <img src="https://img.shields.io/badge/Location-Bangalore%2C%20India-e2e8f0?style=flat-square&labelColor=1e1e2e" />
-  <img src="https://img.shields.io/badge/Open%20to-Lead%20%7C%20Staff%20%7C%20Principal-34d399?style=flat-square&labelColor=1e1e2e" />
-  <img src="https://img.shields.io/badge/License-MIT-38bdf8?style=flat-square&labelColor=1e1e2e" />
+  <img src="https://github-readme-stats.vercel.app/api?username=ykstorm&theme=radical&hide=prs,contribs" alt="ykstorm's GitHub stats" />
 </p>
-
----
-
-## 📦 Production Projects (MIT Licensed)
-
-| Project | Language | Tests | CI | Key Features | Live |
-|---------|----------|-------|----|-------------|------|
-| **[guardrail-proxy](https://github.com/ykstorm/guardrail-proxy)** | TypeScript | 27 ✓ | GitHub Actions | Streaming guardrails, 23 CHECK cases, mid-stream abort, partial delivery | [npm](https://www.npmjs.com/package/@ykstorm/guardrail-proxy) |
-| **[stream-bench](https://github.com/ykstorm/stream-bench)** | TypeScript | 8 ✓ | GitHub Actions | LLM benchmark: TTFT, TPS, cost tracking, $2 hard ceiling | GitHub |
-| **[rag-starter](https://github.com/ykstorm/rag-starter)** | TypeScript | 15 ✓ | GitHub Actions | pgvector RAG pipeline, cosine similarity, adaptive K, idempotent upsert | GitHub |
-| **[devops-showcase](https://github.com/ykstorm/devops-showcase)** | YAML/Helm | — | GitHub Actions | Kubernetes GitOps, ArgoCD app-of-apps, canary deploys, Prometheus/Loki/Tempo | GitHub |
-| **[codecraft-ai](https://github.com/ykstorm/codecraft-ai)** | TypeScript | 23 ✓ | GitHub Actions | AI browser IDE, WebContainers, Monaco Editor, Ollama local LLMs | [Live](https://codecraft-ai.vercel.app) |
-
----
-
-## 🛠️ Tech Stack
-
-**Backend:** TypeScript · Node.js · Next.js 15 · Prisma 7 · PostgreSQL/pgvector · Neon · Redis
-**AI:** GPT-4o streaming · guardrail patterns · RAG pipelines · local Ollama
-**Platform:** Kubernetes · ArgoCD · Argo Rollouts · Prometheus · Loki · Tempo · Grafana · cert-manager · Sealed Secrets
-**DevOps:** GitHub Actions · Docker · Docker Compose · kind · Helm · Terraform
-
----
-
-## 📊 GitHub Stats
-
-<p align="center">
-  <img height="130" src="https://github-readme-stats-ykstorm.vercel.app/api?username=ykstorm&theme=github_dark_dimmed&hide_border=true&show_icons=true&include_all_commits=true" />
-  <img height="130" src="https://github-readme-stats-ykstorm.vercel.app/api/top-langs/?username=ykstorm&theme=github_dark_dimmed&hide_border=true&layout=compact&langs_count=6" />
-</p>
-
----
-
-## 🎯 Currently Looking For
-
-**Staff+ / Lead / Principal Engineer** roles at AI product companies where the platform is as interesting as the product.
-
-**Focus:** TypeScript · Next.js · AI streaming · RAG · Kubernetes GitOps · PostgreSQL
-**Location:** Bangalore, India — open to global remote
-**Status:** Available immediately
-
----
-
-## 📞 Connect
-
-<p align="center">
-  <a href="https://linkedin.com/in/lakshyarajsinghrao">
-    <img src="https://img.shields.io/badge/LinkedIn-lakshyarajsinghrao-0a66c2?style=flat-square&logo=linkedin" />
-  </a>
-  <a href="https://github.com/ykstorm">
-    <img src="https://img.shields.io/badge/GitHub-ykstorm-8b5cf6?style=flat-square&logo=github" />
-  </a>
-  <a href="https://twitter.com/ykstorm">
-    <img src="https://img.shields.io/badge/X-ykstorm-000?style=flat-square&logo=x" />
-  </a>
-  <a href="https://ykstorm.github.io">
-    <img src="https://img.shields.io/badge/Portfolio-ykstorm.github.io-38bdf8?style=flat-square&logo=vercel" />
-  </a>
-</p>
-
----
-
-*Last updated: 2026-05-11 · All projects MIT Licensed · Portfolio: ykstorm.github.io*
