@@ -1,62 +1,87 @@
-# Hi, I'm Lakshyaraj 👋
+# Lakshyaraj Singh Rao
 
-**Full-Stack Developer (Backend + Platform Engineering)** · BTech CCE, Manipal University Jaipur · Bangalore, India · Open to fresher/junior roles · MIT License
+**Full-Stack Engineer · AI Systems · Backend · DevOps**
 
----
+Jaipur, India · open to Bangalore / Mumbai / remote · raolakshyaraj@gmail.com
 
-## What I'm building
-
-Solo CTO of [Homesty.ai](https://homesty.ai) — an AI-powered real estate platform. I built every layer: streaming GPT-4o chat with runtime guardrails (abort mid-generation on policy violations), pgvector RAG with sub-50ms retrieval, a 7-module decision engine, and a full admin system. 165 production deploys.
-
-The open-source work below shows the pieces in detail.
+> Production-shipped a live AI advisor handling real users. Now building infra-layer tools.
 
 ---
 
-## The repos
+## Production Product
 
-```mermaid
-graph LR
-    subgraph "LLM Safety"
-        GP[guardrail-proxy\n23 CHECK cases\n16-token sliding window] --> SB[stream-bench\nTTFT · TPS · guardrail overhead\n$2 cost ceiling]
-    end
+### [homesty.ai](https://homesty.ai) — Live AI real-estate advisor
 
-    subgraph "AI Infrastructure"
-        RS[rag-starter\npgvector RAG template\nsub-50ms retrieval] --> CC[CodeCraft AI\nBrowser IDE\nWebContainers + Ollama]
-    end
+Solo-shipped. 165 production deployments. 0 critical Sentry classes under live traffic. 159 unit tests passing. 5-layer anti-fabrication architecture: PART 0 hard-stop rules + onChunk markdown abort + 17-class regex audit + source-provenance API blockade + GUARD_LIST RAG grounding. 8-stage chat pipeline: rate-limit → intent → RAG → GPT-4o stream → audit → log.
 
-    subgraph "Platform Engineering"
-        DS[devops-showcase\nKubernetes GitOps\nArgoCD + canary deploys] --> CC
-    end
-```
-
-| Project | What it proves | Stack |
-|---------|----------------|-------|
-| **[guardrail-proxy](https://github.com/ykstorm/guardrail-proxy)** | LLM safety systems — 23 regex-based CHECK cases, streaming mid-abort, partial delivery guarantee | TypeScript · Vitest · NPM |
-| **[stream-bench](https://github.com/ykstorm/stream-bench)** | Performance measurement rigor — TTFT, TPS, guardrail overhead, cost ceiling with JSON Lines ledger | TypeScript · OpenAI · Anthropic |
-| **[rag-starter](https://github.com/ykstorm/rag-starter)** | RAG from production — 0.30 cosine floor, adaptive K (6/10), idempotent upsert, extracted from Homesty.ai buyerchat | Next.js · Prisma · pgvector |
-| **[devops-showcase](https://github.com/ykstorm/devops-showcase)** | Kubernetes platform engineering — kind cluster, ArgoCD app-of-apps, canary deploys + auto-rollback, full observability stack | Kubernetes · ArgoCD · Helm · Prometheus |
-| **[CodeCraft AI](https://github.com/ykstorm/codecraft-ai)** | Browser-based IDE internals — WebContainers (real Node.js in browser via V8 Service Worker), Monaco Editor, xterm.js, 4-mode Ollama chat | Next.js · WebContainers · Docker |
+Stack: Next.js 15 · Postgres + pgvector · Prisma 7 · GPT-4o · Claude Sonnet 4.6 · Sentry · Docker
+Repo: [buyerchat](https://github.com/ykstorm/buyerchat) (Apache 2.0)
 
 ---
 
-## Stack
+## AI Infra & Tooling
 
-**Backend:** TypeScript · Next.js 15 · React 19 · Node.js · Prisma 7 · PostgreSQL/pgvector · Neon
-**AI:** GPT-4o streaming · guardrails · RAG · Ollama local LLMs
-**Platform:** Kubernetes · ArgoCD · Argo Rollouts · Prometheus · Loki · Tempo · Grafana
-**DevOps:** GitHub Actions · Docker · Docker Compose · kind · Helm
+### [vercel-ai-eval](https://github.com/ykstorm/vercel-ai-eval) — npm: LLM evals for Vercel AI SDK
+`npm install -D vercel-ai-eval`
+Drop-in eval framework. GitHub Actions CI. LLM-as-judge + golden datasets + regression detection.
+
+### [llm-otel-exporter](https://github.com/ykstorm/llm-otel-exporter) — OpenTelemetry for LLM calls
+`npm install llm-otel-exporter`
+Standards-track OTEL exporter (gen_ai.* semantic conventions). Pipe LLM traces into Datadog, Honeycomb, Grafana — the dashboards you already pay for.
+
+### [idempotency-key](https://github.com/ykstorm/idempotency-key) — Stripe-style idempotency middleware
+`npm install idempotency-key`
+Drop-in Express/Hono/Next.js middleware. Body-hash replay protection. Configurable storage (memory / Redis / Postgres).
+
+### [rag-starter](https://github.com/ykstorm/rag-starter) — Production RAG template
+pgvector retrieval (sub-50ms p99). Embed-writer, cosine-floor, provenance API.
+
+### [guardrail-proxy](https://github.com/ykstorm/guardrail-proxy) — LLM streaming safety
+Mid-stream abort, 17-class regex audit, PII scrub.
 
 ---
 
-## Status
+## Platform & DevOps
 
-- 🔍 **Open to:** Fresher / Junior Full-Stack Developer, Backend Engineer, or Platform Engineering roles (India/Remote)
-- 🎓 **Education:** BTech Computer Communication Engineering (8th Semester), Manipal University Jaipur
-- 📍 **Location:** Jaipur, India
-- 📧 **Reach:** [raolakshyaraj@gmail.com](mailto:raolakshyaraj@gmail.com) · [linkedin.com/in/lakshyarajsinghrao](https://linkedin.com/in/lakshyarajsinghrao)
+### [devops-showcase](https://github.com/ykstorm/devops-showcase) — GitOps platform-in-a-box
+Kubernetes · ArgoCD · canary · Prometheus · Grafana.
+
+### [k8s-deploy-tracker](https://github.com/ykstorm/k8s-deploy-tracker) — Deployment audit trail
+Go · k8s event stream · GPT-4 problem-deploy summarization.
+
+### [stream-bench](https://github.com/ykstorm/stream-bench) — LLM streaming benchmark
+Latency, throughput, TTFT across providers.
 
 ---
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=ykstorm&theme=radical&hide=prs,contribs" alt="ykstorm's GitHub stats" />
-</p>
+## Dev Tools
+
+### [codecraft-ai](https://github.com/ykstorm/codecraft-ai) — Browser-based AI IDE
+WebContainers · Monaco · Claude-powered code agents.
+
+---
+
+## All Repos
+
+| Repo | Stack | Status |
+|---|---|---|
+| [buyerchat](https://github.com/ykstorm/buyerchat) | Next.js · Postgres · GPT-4o | LIVE @ homesty.ai |
+| [vercel-ai-eval](https://github.com/ykstorm/vercel-ai-eval) | TypeScript · npm | shipping |
+| [llm-otel-exporter](https://github.com/ykstorm/llm-otel-exporter) | TypeScript · OTEL · npm | planned |
+| [idempotency-key](https://github.com/ykstorm/idempotency-key) | TypeScript · npm | planned |
+| [rag-starter](https://github.com/ykstorm/rag-starter) | pgvector · Node.js | stable |
+| [guardrail-proxy](https://github.com/ykstorm/guardrail-proxy) | Node · regex audit | stable |
+| [devops-showcase](https://github.com/ykstorm/devops-showcase) | k8s · ArgoCD | stable |
+| [k8s-deploy-tracker](https://github.com/ykstorm/k8s-deploy-tracker) | Go · Postgres | stable |
+| [stream-bench](https://github.com/ykstorm/stream-bench) | Node · benchmarks | stable |
+| [codecraft-ai](https://github.com/ykstorm/codecraft-ai) | Next.js · WebContainers | beta |
+
+---
+
+## Reach
+
+[linkedin.com/in/lakshyaraj](https://linkedin.com/in/lakshyaraj) · raolakshyaraj@gmail.com
+
+License: Apache 2.0 across all repos.
+
+![GitHub Stars](https://img.shields.io/github/stars/ykstorm?style=for-the-badge) ![Profile Views](https://komarev.com/ghpvc/?username=ykstorm&style=for-the-badge&color=ff4081)
