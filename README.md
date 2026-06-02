@@ -1,17 +1,22 @@
 # Lakshyaraj Singh Rao
 
-Full-stack engineer. AI systems. Backend. Mumbai.
+Backend engineer. AI infrastructure. Eval systems. Mumbai → Remote.
 
-I build LLM products that ship to production — and the libraries that keep them honest there.
+I build the libraries I needed when shipping AI products that couldn't lie to users.
 
-Currently solo on [homesty.ai](https://homesty.ai), a commission-generating real-estate AI advisor (Next.js 15, Postgres + pgvector, GPT-4o/Claude streaming). 165+ production deploys. Zero critical Sentry classes firing under live traffic. The patterns that survived are five open-source projects:
+Open-source toolkit — all Apache 2.0:
 
-- [Anchor](https://github.com/ykstorm/anchor) — provenance-first RAG that refuses to hallucinate
-- [Tripwire](https://github.com/ykstorm/tripwire) — mid-stream LLM safety, token-level abort
-- [Goldset](https://github.com/ykstorm/goldset) — AI evals as code, GitHub Action with PR comments
-- [Quickdraw](https://github.com/ykstorm/quickdraw) — LLM streaming benchmarks with cost ceiling
-- [Stackup](https://github.com/ykstorm/stackup) — production K8s on your laptop in 10 minutes
+- 🪨 [Anchor](https://github.com/ykstorm/anchor) — Provenance-first RAG with cosine-floor refusal. Returns refused: true when similarity falls below 0.30. [Live playground](https://anchor-iota-ten.vercel.app/playground).
+- ⚡️ [Goldset](https://github.com/ykstorm/goldset) — Three-runner AI eval framework as a GitHub Action. PR comment diffs the delta, blocks merge on regression. Published to npm + Marketplace.
+- 🚦 [Tripwire](https://github.com/ykstorm/tripwire) — Mid-stream LLM safety. Token-by-token rule engine, sub-millisecond abort on rule trip.
+- 📊 [Quickdraw](https://github.com/ykstorm/quickdraw) — LLM streaming benchmark CLI. TTFT, tokens/sec, $/1K. Nightly bench against OpenAI + Anthropic.
+- ☸️ [Stackup](https://github.com/ykstorm/stackup) — Production-style Kubernetes locally in 10 minutes. ArgoCD + Argo Rollouts + Grafana via one make up.
+- 💻 [Codecraft](https://github.com/ykstorm/codecraft-ai) — In-browser IDE with real Node.js via WebContainers + local Ollama. [Live](https://codecraft-ai.vercel.app).
 
-All Apache 2.0. All Dockerized. Each ships with a 60-second quickstart, honest "when not to use" tables, and a working docker compose up.
+On npm: [@ykstormsorg](https://www.npmjs.com/~ykstormsorg) — goldset, quickdraw, tripwire
 
-Mumbai · [raolakshyaraj@gmail.com](mailto:raolakshyaraj@gmail.com) · [LinkedIn](https://linkedin.com/in/lakshyaraj)
+Currently building: Backend Platform Module Suite — BullMQ-backed idempotent job queue + retry-safe webhook receiver + Terraform module.
+
+Open to: Backend platform roles · AI infra contracts
+
+📍 [lakshyaraj-dev.vercel.app](https://lakshyaraj-dev.vercel.app) · 📧 raolakshyaraj@gmail.com · 🐦 [@ykstorm](https://x.com/ykstorm)
