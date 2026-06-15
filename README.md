@@ -6,6 +6,27 @@ I build the libraries I needed while shipping AI products that couldn't lie to u
 
 **4 npm packages** (one published with build provenance) · a **GitHub Marketplace Action** · **7 open-source repos**, each with a live demo and green CI.
 
+```mermaid
+flowchart TD
+  H["Homesty.ai — live AI product · sole engineer"]
+
+  subgraph reliability["AI reliability"]
+    A["Anchor · provenance RAG"]
+    T["Tripwire · stream guardrail"]
+    G["Goldset · LLM eval Action"]
+    Q["Quickdraw · streaming benchmark"]
+  end
+
+  subgraph platform["Backend platform"]
+    AN["Anvil · webhook to BullMQ · npm + provenance"]
+    S["Stackup · Kubernetes GitOps lab"]
+    C["Codecraft · in-browser IDE"]
+  end
+
+  H -->|patterns extracted| A
+  H -->|patterns extracted| T
+```
+
 ## Open source
 
 - 🔨 [**Anvil**](https://github.com/ykstorm/anvil) — Idempotent webhook → BullMQ worker pipeline. HMAC-SHA256 constant-time verify, dedupe, backoff `[1s, 5s, 30s, 5m]`, dead-letter replay. Ships with a Terraform module and a Helm chart. On [npm](https://www.npmjs.com/package/@ykstormsorg/anvil) with **build provenance**.
