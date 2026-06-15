@@ -25,7 +25,7 @@ users.
   [Live](https://codecraft-ai-tau.vercel.app).
 
 On npm: [@ykstormsorg](https://www.npmjs.com/~ykstormsorg) — goldset, quickdraw,
-tripwire. Anchor lives at [@ykstorm/anchor](https://www.npmjs.com/package/@ykstorm/anchor).
+tripwire.
 
 ## Currently building
 
