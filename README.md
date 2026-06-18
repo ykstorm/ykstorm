@@ -1,6 +1,6 @@
 # Lakshyaraj Singh Rao
 
-Backend engineer · AI infrastructure · DevOps · Jaipur, India
+Backend engineer · AI infrastructure · DevOps · Mumbai, India
 
 I build the libraries I needed while shipping AI products that couldn't lie to users.
 
