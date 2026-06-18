@@ -6,6 +6,13 @@ I build the libraries I needed while shipping AI products that couldn't lie to u
 
 **4 npm packages** (one published with build provenance) · a **GitHub Marketplace Action** · **7 open-source repos**, each with a live demo and green CI.
 
+<!-- Rendered to PNG so it shows on the GitHub mobile app and in dark mode,
+     where ```mermaid blocks don't render. Source kept in <details> below. -->
+![Homesty.ai patterns extracted into AI-reliability and backend-platform open source](assets/profile-architecture.png)
+
+<details>
+<summary>Diagram source (Mermaid)</summary>
+
 ```mermaid
 flowchart TD
   H["Homesty.ai — live AI product · sole engineer"]
@@ -26,6 +33,8 @@ flowchart TD
   H -->|patterns extracted| A
   H -->|patterns extracted| T
 ```
+
+</details>
 
 ## Open source
 
