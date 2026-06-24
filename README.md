@@ -7,7 +7,6 @@
 [![Portfolio](https://img.shields.io/badge/Portfolio-lakshyaraj--dev-0e7490?style=flat-square&logo=vercel&logoColor=white)](https://lakshyaraj-dev.vercel.app)
 [![npm](https://img.shields.io/badge/npm-@ykstormsorg-cb3837?style=flat-square&logo=npm&logoColor=white)](https://www.npmjs.com/~ykstormsorg)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Lakshyaraj-0a66c2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/lakshyaraj-singh-rao-840273152)
-[![X](https://img.shields.io/badge/X-@ykstorm-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/ykstorm)
 [![Email](https://img.shields.io/badge/Email-raolakshyaraj-555?style=flat-square&logo=gmail&logoColor=white)](mailto:raolakshyaraj@gmail.com)
 
 **Four npm packages** (one with SLSA build provenance) · a **GitHub Marketplace Action** · **seven open-source repos**, each with a live demo and green CI — every one extracted from a live, solo-built AI product.
