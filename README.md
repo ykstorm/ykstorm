@@ -79,3 +79,5 @@ Sole engineer on [**Homesty.ai**](https://homesty.ai) — a live buyer-side real
 Backend-platform / AI-infrastructure / DevOps roles — remote-first, Bangalore or Mumbai startups, YC seed-stage founding engineer, or contract work on RAG, streaming LLM, and queue/webhook reliability.
 
 📍 [lakshyaraj-dev.vercel.app](https://lakshyaraj-dev.vercel.app)  ·  📧 raolakshyaraj@gmail.com
+
+<!-- commits from this repo signed with SSH key SHA256:75RZeK... -->
