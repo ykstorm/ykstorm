@@ -55,6 +55,14 @@ flowchart TD
 
 On npm: [**@ykstormsorg**](https://www.npmjs.com/~ykstormsorg) — anvil, tripwire, goldset, quickdraw.
 
+## Open source contributions
+
+- **Trigger.dev [#3726](https://github.com/triggerdotdev/trigger.dev/pull/3726)**
+  — `ExponentialBackoff.execute()` enforced `maxElapsed` against
+  summed retry delays, not wall-clock; slow callbacks overran
+  deadlines unbounded. Wall-clock guard + regression test.
+  Vouch pending, in review.
+
 ## Day job
 
 Sole engineer on [**Homesty.ai**](https://homesty.ai) — a live buyer-side real-estate AI on Next.js 15 + Postgres/pgvector + Prisma + GPT-4o + Claude. Refusal-first retrieval and a mid-stream guardrail were hardened out of this work into Anchor and Tripwire — same engine, made public.
