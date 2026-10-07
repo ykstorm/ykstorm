@@ -10,10 +10,12 @@ Longer write-ups, with the exact mechanism behind each one, are at [ykstorm.gith
 
 - [Anvil](https://github.com/ykstorm/anvil): webhook receiver that dedupes re-deliveries and hands jobs to BullMQ. TypeScript, Redis, Docker. On npm as [@ykstormsorg/anvil](https://www.npmjs.com/package/@ykstormsorg/anvil).
 - [Anchor](https://github.com/ykstorm/anchor): pgvector RAG that abstains when the best match is weak instead of answering anyway. Next.js, Postgres, Prisma. [Playground](https://anchor-iota-ten.vercel.app/playground).
-- [Tripwire](https://github.com/ykstorm/tripwire): checks LLM output mid-stream and stops it if a rule trips. Express proxy, also on [npm](https://www.npmjs.com/package/@ykstormsorg/tripwire).
+- [Tripwire](https://github.com/ykstorm/tripwire): checks LLM output as it streams, holds back the tail until it is safe, and stops the stream when a rule trips. A library and an Express proxy, on npm as [@ykstormsorg/tripwire](https://www.npmjs.com/package/@ykstormsorg/tripwire).
 - [Stackup](https://github.com/ykstorm/stackup): one-command local Kubernetes with ArgoCD, Prometheus, and canary rollouts gated on a live success-rate check. [Docs](https://ykstorm.github.io/stackup/).
 
-Smaller ones: [Goldset](https://github.com/ykstorm/goldset) (GitHub Action that runs an eval set on PRs), [Quickdraw](https://github.com/ykstorm/quickdraw) (CLI for LLM streaming latency and cost), [Codecraft](https://github.com/ykstorm/codecraft-ai) (in-browser IDE on WebContainers).
+Smaller ones: [Goldset](https://github.com/ykstorm/goldset), a GitHub Action that runs an eval set on every pull request and fails the check on a regression ([npm](https://www.npmjs.com/package/@ykstormsorg/goldset)); [Quickdraw](https://github.com/ykstorm/quickdraw), a CLI that measures LLM streaming latency and cost with a spend ceiling ([npm](https://www.npmjs.com/package/@ykstormsorg/quickdraw)); [Codecraft](https://github.com/ykstorm/codecraft-ai), an in-browser IDE that boots a Node dev server in the tab with WebContainers ([live](https://codecraft-ai-tau.vercel.app)).
+
+Every package publishes from a tag on main through GitHub Actions with provenance, so what npm serves is what the repository says.
 
 ## Stack
 
